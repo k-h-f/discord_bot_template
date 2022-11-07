@@ -1,7 +1,7 @@
 # discord_bot_template
 This is a template for making discordjs bots. You can clone this repository, and start developing your own personal discord bot using `nodejs` and the `discordjs` library. This template primaryily uses `typescript` and has linting already setup.
 
-This template uses version `14.15.0` for `discordjs.
+This template uses version `14.15.0` for `discordjs`.
 
 ## Prerequisites
 1. nodejs (this template uses version 16)

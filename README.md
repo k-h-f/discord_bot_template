@@ -49,3 +49,6 @@ If you want to create a new command, follow these instructions
     * Implement the command. You can do this by either following the same structure as the previous command e.g. create `SlashCommandBuilder` object and the `exeucte` function
 2. export it in `index.ts` inside the `commandFiles` directory. Prefably, export it with the same name as your command in all lower caps
 3. Ensure that you have `CLIENT_ID` environment variable set in the `.env` file. You can find your application ID in the Discord developer portal, or follow the guide in the Prerequisites stage in this readme to create your bot
+
+#### Interaction with commands
+Commands are essentially interactions. the `interaction` object will be passed in the `execute` function of any command. You can do a [lot](https://discord.js.org/#/docs/discord.js/main/class/CommandInteraction) with interactions. One of the command things is to use the `reply` function. With this function, you can add [embds](https://discord.js.org/#/docs/discord.js/main/class/CommandInteraction?scrollTo=reply), create [selects menus](https://discordjs.guide/interactions/select-menus.html#building-and-sending-select-menus), and a lot of found under the `interactions` section in the `discordjs` [documentation](https://discordjs.guide/interactions/buttons.html#component-collectors)

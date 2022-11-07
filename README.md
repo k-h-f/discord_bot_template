@@ -4,7 +4,7 @@ This is a template for making discordjs bots. You can clone this repository, and
 This template uses version `14.15.0` for `discordjs`.
 
 ## Prerequisites
-1. nodejs (this template uses version 16)
+1. `nodejs` (this template uses version 16)
 2. Discord bot already set up, follow this [guide](https://discord.com/developers/docs/getting-started#configuring-a-bot) if you don't have a discord bot setup
 
 ## Setup

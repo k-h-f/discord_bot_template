@@ -1,8 +1,12 @@
 import dotenv from 'dotenv';
 dotenv.config();
 
+// You can enable support for commands by uncommenting the import below
+//If you don't want to support commands, you could delete the necessary files (found in commands directory)
+//import './commands/deploy-commands';
+
 // Require the necessary discord.js classes
-import { Client, Intents } from 'discord.js';
+import { Client } from 'discord.js';
 import { getConfig } from './getConfig';
 import EventHandler from './eventHandler';
 

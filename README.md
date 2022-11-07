@@ -42,7 +42,7 @@ By default, this tempalate disables the support for commands but if you want to 
 ``` javascript
 import './commands/deploy-commands';
 ```
-There is a command already implemented called `commandsList` which will list out all of the commands that is supported in the bot. You can use this as a guideline to create more commands
+There is a command already implemented called `commandsist` which will list out all of the commands that is supported in the bot. You can use this as a guideline to create more commands
 
 If you want to create a new command, follow these instructions
 1. Create a file in the `commandsFiles` directory that is named after the command you want to name. The filename must be in all lower caps

@@ -1,4 +1,6 @@
-import { Client } from 'discord.js';
+import { Client, Interaction } from 'discord.js';
+import * as commandModules from './commands/commandFiles';
+
 
 /**
  * EventHandler handles all Discord events in one place by taking a Discord client and attaches
@@ -9,12 +11,14 @@ import { Client } from 'discord.js';
  */
 class EventHandler {
   private client: Client<boolean>;
+  private commands: any;
 
   /**
    * @param client Discord client instance
    */
   constructor(client: Client<boolean>) {
     this.client = client;
+    this.commands = Object(commandModules)
   }
 
   /**
@@ -34,6 +38,20 @@ class EventHandler {
       console.log('READY');
     });
   }
+
+    /**
+   * When a message from a user that is a command
+   */
+     async interactionCreate() {
+      this.client.on('interactionCreate', (interaction: Interaction) => {
+        if (!interaction.isCommand()) {
+          return;
+        }
+  
+        const { commandName } = interaction;
+        this.commands[commandName].execute(interaction, this.client);
+      });
+    }
 }
 
 export default EventHandler;
